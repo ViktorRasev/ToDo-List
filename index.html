@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="FontAwesome/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>To do list</title>
+  </head>
+
+  <body>
+    <main class="to-do-app">
+      <div class="main-content">
+        <div class="heading-with-svg">
+          
+          <img
+            src="images/checklist-svgrepo-com.svg"
+            class="checklist-image"
+            alt="checklist-image"
+          />
+          <h1>To do list</h1>
+        </div>
+
+        <form class="main-form">
+          <input type="text" placeholder="Add task" class="add-task-input" />
+          <input type="submit" value="+" class="submit-button" />
+        </form>
+
+        <div class="results-div"></div>
+        <div class="div-for-delete-buttons"></div>
+      </div>
+      <div class="container">
+          <div class="delete-modal">
+          <button type="button" class="close-modal-btn">&Cross;</button>
+          <h2>Are you sure you want to delete all tasks?</h2>
+          <div class="modal-buttons">
+            <button type="button" class="cancelbtn-modal">Cancel</button>
+            <button type="button" class="deleteallbtn-modal">Delete all tasks</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

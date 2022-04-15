@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+main {
+  font-family: "Varela Round", sans-serif;
+  height: 100%;
+  background-image: url("images/background-ToDoApp.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-x: scroll;
+}
+ 
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10%;
+  margin: 0 10%;
+}
+
+.heading-with-svg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1.5em;
+  margin-left: -7em;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+}
+
+.checklist-image {
+  height: 30px;
+  padding-right: 12px;
+}
+
+.main-form {
+height: 30px;
+width: 20rem;
+margin-bottom: 10px;
+border-radius: 100px;
+background-color: #fff;
+padding: 5px 10px;
+position: relative;
+}
+
+.add-task-input{
+position: absolute;
+height: 30px;
+width: 240px;
+top: 0;
+left: 0;
+padding-left: 10px;
+font-size: 1rem;
+border: none;
+border-radius:100px 0 0 100px ;
+}
+
+.add-task-input:focus {
+outline: none;
+box-shadow: 0 0 2px rgb(51, 58, 67);
+}
+
+.submit-button {
+position:absolute;
+right: 0;
+top: 0;
+width: 5rem;
+height: 30px;
+border-radius: 0 100px 100px 0; 
+border: none;
+background-color: rgb(51, 58, 67);
+color: rgb(255, 255, 255);
+font-size: 1rem;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  background: rgb(39, 43, 47);
+  color: rgba(255, 255, 255, 0.836);
+}
+.results-div {
+  width: 330px;
+  margin: 30px 0 0 10px;
+}
+.results-form {
+  height: 30px;
+  width: 20rem;
+  margin-bottom: 10px;
+  border-radius: 100px;
+  background-color: #fff;
+  padding: 5px 10px;
+  position: relative;
+}
+
+
+.right-div {
+  width: 4.9rem;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top:0;
+  background-color: rgb(51, 58, 67);
+  border-radius:0 100px 100px 0 ;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+
+}
+.closing-btn {
+  width: 20px;
+  height: 20px;
+}
+
+.div-for-delete-buttons {
+  width: 330px;
+  margin: 20px 0 0 10px;
+}
+
+.delete-completed-btn {
+  height: 30px;
+  width: 20rem;
+  margin-bottom: 10px;
+  border-radius: 100px;
+  border: none;
+  color: #fff;
+  background-color: rgb(51, 58, 67);
+  padding: 5px 10px;
+}
+
+
+
+.delete-completed-btn:hover {
+  cursor: pointer;
+  background: rgb(39, 43, 47);
+  color: rgba(255, 255, 255, 0.836);
+}
+
+.delete-all-btn { 
+  height: 30px;
+  width: 20rem;
+  margin-bottom: 10px;
+  border-radius: 100px;
+  border: none;
+  color: #fff;
+  background:red;
+  padding: 5px 10px;
+}
+
+.delete-all-btn:hover { 
+  cursor: pointer;
+  background: #bb1616;
+  color: rgba(255, 255, 255, 0.836);
+}
+
+/* DELETE MODAL  */
+.delete-modal { 
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(78 89 111 / 50%);
+}
+
+.container {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: rgb(222 222 222 / 85%);
+border: #f0e7e7e0 2px solid;
+border-radius: 10px;
+padding: 10vh 10vh;
+}
+
+.close-modal-btn {
+position: absolute;
+right: 0;
+top: 0;
+padding: 5px 10px;
+color: white;
+background-color: red;
+font-size: 20px;
+border-radius: 10px;
+border: none;
+cursor: pointer;
+}
+
+.close-modal-btn:hover { 
+  cursor: pointer;
+  background: #bb1616;
+  color: rgba(255, 255, 255, 0.836);
+}
+
+.modal-buttons{
+  display: flex ;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 30px;
+  
+}
+
+@media(max-width:500px) {
+  .modal-buttons{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.cancelbtn-modal{
+  font-size: medium;
+  font-weight: 500;
+  height: 50px;
+  width: 10rem;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 100px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(51, 58, 67);
+}
+
+.cancelbtn-modal:hover {
+  cursor: pointer;
+  background: rgba(51, 58, 67, 0.945);
+  color: rgba(255, 255, 255, 0.836);
+}
+
+.deleteallbtn-modal{
+  font-size: medium;
+  font-weight: 500;
+  height: 50px;
+  width: 10rem;
+  margin-bottom: 10px;
+  border-radius: 100px;
+  border: none;
+  color: #fff;
+  background:red;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.deleteallbtn-modal:hover {
+  cursor: pointer;
+  background: #bb1616;
+  color: rgba(255, 255, 255, 0.836);
+}
