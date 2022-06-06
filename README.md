@@ -1,2 +1,2 @@
 # ToDo-List
-https://viktorrasev.github.io/ToDo-List/index.html
+https://viktorrasev-todolist.netlify.app/
